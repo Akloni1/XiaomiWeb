@@ -1,2 +1,3 @@
 # XiaomiWeb
-XiaomiWeb  for  learning
+Karpukhin Mikhail Andreevich  
+Baghiyan Gregoriy Arkadievich
