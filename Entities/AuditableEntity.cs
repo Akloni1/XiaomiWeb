@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebPhone.Entities
+namespace Entities
 {
     public abstract class AuditableEntity : Entity
     {

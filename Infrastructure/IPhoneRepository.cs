@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebPhone.Entities;
+using Entities;
 
-namespace WebPhone.DataAccess
+namespace Infrastructure
 {
-    interface IPhoneRepository
+    public interface IPhoneRepository
     {
         IReadOnlyList<Phone> GetAll();
         Phone Get(int id);

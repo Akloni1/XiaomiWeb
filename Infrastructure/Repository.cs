@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebPhone.DataAccess
+namespace Infrastructure
 {
     public abstract class Repository<TEntity> where TEntity : class
     {

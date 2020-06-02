@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using WebPhone.Entities;
+using Entities;
 
-namespace WebPhone.DataAccess
+namespace Infrastructure
 {
     public class AppDbContext : DbContext
     {

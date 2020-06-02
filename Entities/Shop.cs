@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebPhone.Entities
+namespace Entities
 {
     public class Shop : AuditableEntity
     {
