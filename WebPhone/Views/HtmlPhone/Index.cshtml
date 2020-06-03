@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Entities.Phone>
+
+@{
+    ViewData["Title"] = "Главная - список телефонов";
+}
+
+
+<h1>Список телефонов</h1>
+
+<p>
+    <a asp-action="Create">Создать новый телефон</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Название
+            </th>
+            <th>
+                Адрес
+            </th>
+            <th>
+                Цена
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Shop.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Обновить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -31,7 +31,7 @@ namespace WebPhone
             services.AddControllers().AddNewtonsoftJson();
             services.AddControllersWithViews();
 
-            //services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<IPhoneRepository, PhoneRepository>();
 
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("MsSqlConnection")));
@@ -46,7 +46,7 @@ namespace WebPhone
             }
 
             //Для прямого доступа к файлам
-            app.UseFileServer();
+            app.UseFileServer();       
 
             // обработка ошибок HTTP
             app.UseStatusCodePages();
