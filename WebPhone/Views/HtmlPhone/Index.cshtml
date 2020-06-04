@@ -5,10 +5,13 @@
 }
 
 
-<h1>Список телефонов</h1>
-
+<center>
+    <h1>Список телефонов</h1>
+</center>
 <p>
-    <a asp-action="Create">Создать новый телефон</a>
+    <center>
+        <a asp-action="Create">Создать новый телефон</a>
+    </center>
 </p>
 
 <table class="table">
@@ -16,6 +19,12 @@
         <tr>
             <th>
                 Название
+            </th>
+            <th>
+                Короткое описание
+            </th>
+            <th>
+                Длинное описание
             </th>
             <th>
                 Адрес
@@ -30,14 +39,21 @@
         @foreach (var item in Model)
         {
             <tr>
+
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    &nbsp;&nbsp;  @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Shop.Address)
+                    &nbsp;&nbsp;  @Html.DisplayFor(modelItem => item.ShorDesc)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Price)
+                    &nbsp;&nbsp;  @Html.DisplayFor(modelItem => item.LongDesc)
+                </td>
+                <td>
+                    &nbsp;&nbsp; @Html.DisplayFor(modelItem => item.Shop.Address)
+                </td>
+                <td>
+                    &nbsp;&nbsp;   @Html.DisplayFor(modelItem => item.Price)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Обновить</a>

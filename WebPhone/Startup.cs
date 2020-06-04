@@ -46,7 +46,7 @@ namespace WebPhone
             }
 
             //Для прямого доступа к файлам
-            app.UseFileServer();       
+            app.UseFileServer();
 
             // обработка ошибок HTTP
             app.UseStatusCodePages();
